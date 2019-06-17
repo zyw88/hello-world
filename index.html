@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>随机点名案例</title>
+    <style>
+        body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr, input, legend, li, ol, p, pre, td, textarea, th, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #f1f1f1;
+            position: relative;
+        }
+
+        .nav {
+            width: 1600px;
+            height: 800px;
+            margin: 100px auto;
+        }
+
+        .navLeft {
+            width: 1200px;
+            height: 100%;
+            float: left;
+            position: relative;
+            border: 1px solid #000;
+        }
+
+        .navLeft ul {
+            color: #FFF;
+            width: 1040px;
+            height: 640px;
+            margin: 0 80px 80px 80px;
+            background: #000;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+
+        .navLeft ul li {
+            width: 104px;
+            float: left;
+            text-align: center;
+            list-style: none;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+
+        .navLeft h1,
+        .navRight h1 {
+            color: #000;
+            text-align: center;
+            line-height: 80px;
+        }
+
+        .navRight {
+            width: 350px;
+            height: 100%;
+            float: left;
+            margin-left: 35px;
+            position: relative;
+            border: 1px solid #000;
+        }
+
+        .rigthA {
+            color: #FFF;
+            width: 190px;
+            height: 640px;
+            margin: 0 80px 80px 80px;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        .rigthA input {
+            color: #FFF;
+            width: 100%;
+            height: 41px;
+            border: 0;
+            outline: 0;
+            background: #000;
+            border-radius: 5px;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .rigthA input:hover {
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        }
+        .rigthA div {
+            color:#000;
+            margin-top: 150px;
+            text-align: center;
+        }
+        .rigthA div span {
+            color: pink;
+            font-weight: 900;
+            text-shadow: 1px 1px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+
+    <div class="navLeft">
+        <span style="width: 80px;height: 80px;border-top: 5px solid #000;border-left: 5px solid #000;position: absolute;"></span>
+        <span style="right:0; width: 80px;height: 80px;border-top: 5px solid #000;border-right: 5px solid #000;position: absolute;"></span>
+        <span style="bottom:0; width: 80px;height: 80px;border-bottom: 5px solid #000;border-left: 5px solid #000;position: absolute;"></span>
+        <span style="right:0; bottom:0; width: 80px;height: 80px;border-bottom: 5px solid #000;border-right: 5px solid #000;position: absolute;"></span>
+
+        <h1>学生名字</h1>
+        <ul id="studentName">
+            <li>
+                <dl>
+                    <dt>小明</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小红</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小兰</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小绿</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小熊</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小夏</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小何</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小黑</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小白</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小智</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小东</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小鱼</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小影</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小马</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小杨</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小安</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小王</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小陈</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小草</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小崔</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小吕</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小笑</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小苏</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小宋</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小郑</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小林</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小柔</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小强</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小吴</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小伟</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小天</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小霞</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小欧</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小胖</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小爱</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小沈</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小帅</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小刀</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小芳</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小飞</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小高</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小郭</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小花</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小军</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小康</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小可</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小猪</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小周</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小赵</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小葱</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小曹</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小宝</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小贝</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>小牛</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+
+    <div class="navRight">
+        <span style="width: 80px;height: 80px;border-top: 2px solid #000;border-left: 3px solid #000;position: absolute;"></span>
+        <span style="right:0; width: 80px;height: 80px;border-top: 2px solid #000;border-right: 3px solid #000;position: absolute;"></span>
+        <span style="bottom:0; width: 80px;height: 80px;border-bottom: 2px solid #000;border-left: 3px solid #000;position: absolute;"></span>
+        <span style="right:0; bottom:0; width: 80px;height: 80px;border-bottom: 2px solid #000;border-right: 3px solid #000;position: absolute;"></span>
+
+        <h1>操作</h1>
+        <div class="rigthA">
+            <input type="button" value="单个点名" id="btn">
+            <div id="dv"></div>
+        </div>
+
+
+    </div>
+</div>
+<script>
+    /**
+     * 加载号数
+     */
+    window.onload = function () {
+        var ddObj = id$("studentName").getElementsByTagName("dd");
+        for (var j = 0; j < ddObj.length; j++) {
+            ddObj[j].innerText = "(" + (j + 1) + ")";
+        }
+    }
+
+    /**
+     * 输入标签返回标签对象
+     * @param id输入标签
+     * @returns {HTMLElement}返回标签对象
+     */
+    function id$(id) {
+        return document.getElementById(id);
+    }
+
+    /**
+     * 点击btn按钮执行随机点名函数
+     */
+    id$("btn").onclick = function () {
+        var list = id$("studentName").getElementsByTagName("dt");//获取studentName下的所有dt
+        var randomNumber = parseInt((Math.floor((Math.random() * 54) + 1)));//生成1～54的随机数
+        for(var i=0 ;i<list.length;i++){
+            list[i].style.background="";//循环所有dt标签的背景色为空
+        }
+        list[randomNumber].style.background="pink";//dt标签加上随机数等于list数组中的索引值
+        id$("dv").innerHTML="恭喜 <span>"+list[randomNumber].innerText+"</span> 同学";//用文本的方式显示出同学的名字
+    }
+</script>
+
+</body>
+</html>
